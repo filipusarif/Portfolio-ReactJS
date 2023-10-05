@@ -1,18 +1,5 @@
 import React from 'react'
 
-// component & property(props)
-// class Hello extends React.Component {
-//   render() {
-//     return <h1>Hello, filp </h1>;
-//   }
-// }
-
-// const Hello = (props) => {
-//   const {color = 'bg-black'} = props;
-//   return [
-//     <button className={`${props.color}`}>hello {props.children}</button>
-//   ]
-// }
 
 function Hello(props) {
   return [
