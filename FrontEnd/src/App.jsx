@@ -3,7 +3,7 @@ import React from 'react'
 
 function Hello(props) {
   return [
-    <button className={`${props.color}`}>hello {props.children}</button>
+    <button className={`${props.color}`}>hello test {props.children}</button>
   ]
 }
 
