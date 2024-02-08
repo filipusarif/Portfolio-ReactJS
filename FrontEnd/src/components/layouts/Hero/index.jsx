@@ -11,11 +11,11 @@ import Element3 from '../../../assets/images/element3.svg'
 export default function index() {
     return (
         <section className="container min-h-screen m-auto flex lg:flex-row flex-col items-center font-Roboto text-white relative" id='Hero'>
-            <div className='basis-[50%]'>
-                <p className='text-[200%]'>Hello Everyone!</p>
-                <h1 className=' font-Raleway text-[500%] font-extrabold  -my-[30px]'>I'm <span className=' text-transparent bg-clip-text bg-gradient-to-r from-[#2996E5] to-[#28D9F1]'>Filipus Arif </span></h1>
-                <h3 className='text-[250%] font-medium mb-5'>a Web Developer</h3>
-                <a href="#" className=' bg-complementary py-[10px] w-[150px] flex items-center justify-center rounded-[14px] gap-[5px]'>Contact Me <img src={Send} alt="send" /></a>
+            <div className='basis-[50%] font-Roboto'>
+                <p className=' font-Poppins gap-2  font-reguler flex items-center text-[140%]'>Introduction <div className='h-[5px] w-[40px] bg-lightBlueAbout rounded-[2px]'></div> </p>
+                <h1 className='mt-2 text-[315%] font-extrabold leading-[105%] text-transparent bg-clip-text bg-gradient-to-r from-[#2996E5] via-[#1CDAAC] via-[90%] to-[#1CDAAC]'>Web Developer and <br /> UI Designer, based <br /> in Semarang.</h1>
+                <p className='mt-3 w-[80%] text-[91%] leading-5'>Hello! I am a skilled and enthusiastic web developer with a passion for translating concepts into captivating online experience. Proficient in front-end technologies like HTM, CSS, and JavaScripts ETC.</p>
+                <a href="#" className=' bg-complementary mt-5 py-[10px] w-[150px] flex items-center justify-center rounded-[14px] gap-[5px]'>Contact Me <img src={Send} alt="send" /></a>
                 <div className='flex items-center gap-[15px] mt-20'>
                     <a href="#"><img src={Github} alt="github" width={'31px'}/></a>
                     <a href="#"><img src={Linkedin} alt="linkedin" width={'31px'} /></a>
@@ -31,6 +31,10 @@ export default function index() {
                     <img src={Element3} alt="" className='absolute bottom-[230px] right-[5px]'/>
                     <img src={Element1} alt="" className='absolute top-[100px] right-[80px] w-[25px]'/>
                     <img src={Element2} alt="" className='absolute bottom-[50px] -right-[50px] w-[25px]'/>
+                    <div className='absolute bottom-2 right-10'>
+                        <h1 className='font-bold text-[260%] leading-[115%]'>Filipus Arif <br /> Kristiyan.</h1>
+                        <div className='h-[5px] w-[98px] bg-complementary -mt-[6px] rounded-[2px]'/>
+                    </div>
                 </div>
             </div>
         </section>

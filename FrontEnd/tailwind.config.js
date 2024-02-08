@@ -16,7 +16,19 @@ module.exports = {
           'unactive':'#6F7A8E',
           'light':'#95A9BA',
           'very-light':'#D9D9D9',
-      }
+          'yellowAbout':'#FAFF00',
+          'redAbout':'#D62A2A',
+          'lightBlueAbout':'#2AA7D6',
+          'brownAbout':'#D67D2A',
+          'purpleAbout':'#9F2AD6',
+          'blueAbout':'#2A5AD6',
+      },
+      keyframes: {
+        scroller: {
+            '0%': { transform: 'translateX(0%)' },
+            '100%': { transform: 'translateX(-100%)' },
+        },
+    }, 
     },
     container: {
       padding: {

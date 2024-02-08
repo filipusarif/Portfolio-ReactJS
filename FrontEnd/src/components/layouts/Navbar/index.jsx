@@ -20,10 +20,10 @@ export default function index() {
             <img src={Logo} alt="Filpp" className='w-[150px]' />
             <nav className='flex items-center gap-[30px] text-[16px] '>
                 <a href="#Hero" className='hover:text-complementary'>Home</a>
-                <a href="#" className='hover:text-complementary'>About</a>
-                <a href="#" className='hover:text-complementary'>Portfolio</a>
-                <a href="#" className='hover:text-complementary'>Skills</a>
-                <a href="#" className='hover:text-complementary'>Contact</a>
+                <a href="#About" className='hover:text-complementary'>About</a>
+                <a href="#Portfolio" className='hover:text-complementary'>Portfolio</a>
+                <a href="#Skill" className='hover:text-complementary'>Skills</a>
+                <a href="#Contact" className='hover:text-complementary'>Contact</a>
             </nav>
         </header>
         </div>
