@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import Image from '../../../assets/images/card10.svg';
+import Tilt from 'react-parallax-tilt';
+
 
 export default function Index() {
     const skill = [
@@ -76,7 +76,7 @@ export default function Index() {
     return (
         <div className="container w-full h-fit mx-auto flex flex-wrap justify-center gap-4 mt-7 pb-6">
         {skill.map((card) => (
-            <Card id={card.id} tech={card.tech} />
+            <Card id={card.id} tech={card.tech} img={card.img}/>
         ))}
         </div>
     );
@@ -90,59 +90,34 @@ function Card(prop){
         setIsHovered(cardId);
     };
 
-    const ROTATION_RANGE = 25; // Adjust this value based on your preference
-    const ref = useRef(null);
 
-    const [rotateX, setRotateX] = useState(0);
-    const [rotateY, setRotateY] = useState(0);
-
-    const handleMouseMove = (e) => {
-        if (!ref.current) return;
-
-        const rect = ref.current.getBoundingClientRect();
-
-        const width = rect.width;
-        const height = rect.height;
-
-        const mouseX = (e.clientX - rect.left - width / 2) / (width / 2);
-        const mouseY = (e.clientY - rect.top - height / 2) / (height / 2);
-
-        setRotateX(mouseY * ROTATION_RANGE);
-        setRotateY(mouseX * ROTATION_RANGE);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(null);
-        setRotateX(0);
-        setRotateY(0);
-    };
     return (
-        <motion.div
-            key={prop.id}
-            ref={ref}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            onMouseEnter={() => handleHover(prop.id)}
-            style={{
-                perspective: 1000, // Adjust this value based on your preference
-                transformStyle: "preserve-3d",
-                rotateX: `${rotateX}deg`,
-                rotateY: `${rotateY}deg`,
-            }}
-            className={`relative h-[200px] w-[170px] bg-secondary py-2 rounded-[15px] cursor-pointer transition-all ease ${isHovered === prop.id ? 'hovered' : ''}`}
-            >
+        <Tilt 
+        key={prop.id}
+        tiltReverse='true' 
+        tiltMaxAngleX='20' 
+        tiltMaxAngleY='20' 
+        perspective='1000' 
+        style={{
+            transformStyle: "preserve-3d",
+        }}
+        onLeave={() => setIsHovered(null)}
+        onEnter={() => handleHover(prop.id)}
+        className={`relative h-[200px] w-[170px] bg-secondary py-2 rounded-[15px] cursor-pointer transition-all ease ${isHovered === prop.id ? 'hovered' : ''}`}
+        >
             <img
-                src={Image}
+                src={`skill/${prop.img}`}
                 alt="Tech"
                 className={`w-[150px] h-[150px] mx-auto ${isHovered === prop.id ? '' : 'filter grayscale'}`}
                 style={{
                     transform: "translateZ(50px)",
+                    width: "65%"
                 }}
             />
             <p className='abso text-center text-slate-200 font-bold font-Poppins'
             style={{
                 transform: "translateZ(50px)",
             }}>{prop.tech}</p>
-            </motion.div>
+        </Tilt>
     )
 }

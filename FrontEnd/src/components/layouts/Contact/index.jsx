@@ -13,9 +13,9 @@ export default function Index() {
         setNameValue(inputName.value);
 
         if (nameValue.trim() !== '') {
-        labelName.classList.add('!text-[90%]', 'text-[#215695]', '-top-5');
+        labelName.classList.add('text-[90%]', 'text-[#215695]', '-top-8');
         } else {
-        labelName.classList.remove('!text-[90%]', 'text-[#215695]', '-top-5');
+        labelName.classList.remove('text-[90%]', 'text-[#215695]', '-top-8');
         }
     }
 
@@ -26,9 +26,9 @@ export default function Index() {
         setEmailValue(input.value);
 
         if (emailValue.trim() !== '') {
-        label.classList.add('!text-[90%]', 'text-[#215695]', '-top-4');
+        label.classList.add('text-[90%]', 'text-[#215695]', '-top-8');
         } else {
-        label.classList.remove('!text-[90%]', 'text-[#215695]', '-top-4');
+        label.classList.remove('text-[90%]', 'text-[#215695]', '-top-8');
         }
     }
 
@@ -39,9 +39,9 @@ export default function Index() {
         setMsgValue(inputMsg.value);
 
         if (msgValue.trim() !== '') {
-        labelMsg.classList.add('!text-[90%]', 'text-[#215695]', '-top-4');
+        labelMsg.classList.add('text-[90%]', 'text-[#215695]', '-top-8');
         } else {
-        labelMsg.classList.remove('!text-[90%]', 'text-[#215695]', '-top-4');
+        labelMsg.classList.remove('text-[90%]', 'text-[#215695]', '-top-8');
         }
     }
 
@@ -61,9 +61,9 @@ export default function Index() {
                         onChange={(e) => setNameValue(e.target.value)}
                         onBlur={checkInputNameNotEmpty}
                         onInput={checkInputNameNotEmpty}
-                        required
+                        
                     />
-                    <label htmlFor="name" className={`absolute font-medium left-2 top-3 text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-5 peer-focus:text-[#215695] transition-all ${nameValue.trim() !== '' ? 'text-xs text-[#215695] -top-4' : ''}`}>
+                    <label htmlFor="name" className={` translate-y-3 absolute font-medium left-2 text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${nameValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
                         Your Name 
                     </label>
                 </div>
@@ -80,7 +80,7 @@ export default function Index() {
                         onInput={checkInputEmailNotEmpty}
                         required
                     />
-                    <label htmlFor="email" className={`absolute font-medium left-2 top-3 text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-5 peer-focus:text-[#215695] transition-all ${emailValue.trim() !== '' ? 'text-xs text-[#215695] -top-4' : ''}`}>
+                    <label htmlFor="email" className={`absolute font-medium left-2 translate-y-3  text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${emailValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
                         Email Address
                     </label>
                 </div>
@@ -97,7 +97,7 @@ export default function Index() {
                         onInput={checkInputMsgNotEmpty}
                         required
                     />
-                    <label htmlFor="msg" className={`absolute font-medium left-2 top-3 text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-5 peer-focus:text-[#215695] transition-all ${msgValue.trim() !== '' ? 'text-xs text-[#215695] -top-4' : ''}`}>
+                    <label htmlFor="msg" className={`absolute font-medium left-2 translate-y-3  text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${msgValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
                         Your Message 
                     </label>
                 </div>

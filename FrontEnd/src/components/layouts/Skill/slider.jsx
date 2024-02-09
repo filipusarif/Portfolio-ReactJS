@@ -1,4 +1,3 @@
-import Image from '../../../assets/images/card10.svg'
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -85,7 +84,7 @@ export default function index(){
                 <div className='h-[200px] w-[170px] bg-secondary py-2 rounded-[15px] cursor-pointer transition-all ease'
                 onMouseEnter={() => handleHover(card.id)}
                 onMouseLeave={() => handleHover(null)}>
-                    <img src={Image} alt="Tech" className={`w-[150px] h-[150px] mx-auto transition duration-500 ease-in-out  ${isHovered === card.id? "":"filter grayscale" }`}/>
+                    <img src={`skill/${card.img}`} alt="Tech" className={`w-[65%] h-[150px] mx-auto transition duration-500 ease-in-out ${isHovered === card.id? "":"filter grayscale" }`}/>
                     <p className='text-center text-slate-200 font-bold font-Poppins'>{card.tech}</p>
                 </div>
             ))}
@@ -96,18 +95,15 @@ export default function index(){
                 <div className='h-[200px] w-[170px] bg-secondary py-2 rounded-[15px] cursor-pointer transition-all ease'
                 onMouseEnter={() => handleHover(card.id)}
                 onMouseLeave={() => handleHover(null)}>
-                    <img src={Image} alt="Tech" className={`w-[150px] h-[150px] mx-auto transition duration-500 ease-in-out  ${isHovered === card.id? "":"filter grayscale" }`}/>
+                    <img src={`skill/${card.img}`} alt="Tech" className={`w-[65%] h-[150px] mx-auto transition duration-500 ease-in-out  ${isHovered === card.id? "":"filter grayscale" }`}/>
                     <p className='text-center text-slate-200 font-bold font-Poppins'>{card.tech}</p>
                 </div>
             ))}
             
         </div>
-        <div className='h-[250px] w-full flex justify-center items-center absolute'>
-            <div className='w-screen  flex justify-between items-center  h-[200px]  z-10 top-0'>
-                <div className='w-[15%] h-full bg-gradient-to-r from-primary   to-[#ffffff00]'/>
-                <div className='w-[15%] h-full bg-gradient-to-l from-primary   to-[#ffffff00]'/>
-            </div>
-        </div>
+        <div className='absolute left-0 w-[15%] h-full bg-gradient-to-r from-primary   to-[#ffffff00]'/>
+        <div className='absolute right-0 w-[15%] h-full bg-gradient-to-l from-primary   to-[#ffffff00]'/>
+
     </div>
     )
 }

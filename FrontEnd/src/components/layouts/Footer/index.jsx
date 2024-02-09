@@ -6,7 +6,7 @@ import Instagram from '../../../assets/images/instagramFooter.svg'
 
 export default function index(){
     return (
-        <section className="w-full h-[51vh] bg-[#141C31]">
+        <section className="w-full min-h-[51vh] bg-[#141C31]">
             <div className="container gap-3 h-full mx-auto flex flex-col py-10 text-[95%] text-slate-400 font-Poppins">
                 <div className='flex basis-[90%] '>
                     <div className='basis-[60%] flex flex-col gap-4'>

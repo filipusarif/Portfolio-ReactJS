@@ -7,6 +7,8 @@ import Element1 from '../../../assets/images/element1.svg'
 import Element2 from '../../../assets/images/element2.svg'
 import Element3 from '../../../assets/images/element3.svg'
 
+import Tilt from 'react-parallax-tilt';
+
 
 export default function index() {
     return (
@@ -14,7 +16,7 @@ export default function index() {
             <div className='basis-[50%] font-Roboto'>
                 <p className=' font-Poppins gap-2  font-reguler flex items-center text-[140%]'>Introduction <div className='h-[5px] w-[40px] bg-lightBlueAbout rounded-[2px]'></div> </p>
                 <h1 className='mt-2 text-[315%] font-extrabold leading-[105%] text-transparent bg-clip-text bg-gradient-to-r from-[#2996E5] via-[#1CDAAC] via-[90%] to-[#1CDAAC]'>Web Developer and <br /> UI Designer, based <br /> in Semarang.</h1>
-                <p className='mt-3 w-[80%] text-[91%] leading-5'>Hello! I am a skilled and enthusiastic web developer with a passion for translating concepts into captivating online experience. Proficient in front-end technologies like HTM, CSS, and JavaScripts ETC.</p>
+                <p className='mt-3 w-[80%] text-[91%] leading-5'>Hello! I am a skilled and enthusiastic web developer with a passion for translating concepts into captivating online experience. Proficient in front-end technologies like HTML, CSS, and JavaScript ETC.</p>
                 <a href="#" className=' bg-complementary mt-5 py-[10px] w-[150px] flex items-center justify-center rounded-[14px] gap-[5px]'>Contact Me <img src={Send} alt="send" /></a>
                 <div className='flex items-center gap-[15px] mt-20'>
                     <a href="#"><img src={Github} alt="github" width={'31px'}/></a>
@@ -22,21 +24,38 @@ export default function index() {
                     <a href="#"><img src={Instagram} alt="instagram" width={'31px'} /></a>
                 </div>
             </div>
-            <div className='basis-[50%] relative'>
-                <img src={Person} alt="Filipus Arif" />
-                <div>
-                    <img src={Element1} alt="" className='absolute bottom-[10px] left-[90px]'/>
-                    <img src={Element2} alt="" className='absolute top-[250px] left-[100px]'/>
-                    <img src={Element1} alt="" className='absolute w-[20px] top-[180px] left-[50px]'/>
-                    <img src={Element3} alt="" className='absolute bottom-[230px] right-[5px]'/>
-                    <img src={Element1} alt="" className='absolute top-[100px] right-[80px] w-[25px]'/>
-                    <img src={Element2} alt="" className='absolute bottom-[50px] -right-[50px] w-[25px]'/>
-                    <div className='absolute bottom-2 right-10'>
-                        <h1 className='font-bold text-[260%] leading-[115%]'>Filipus Arif <br /> Kristiyan.</h1>
-                        <div className='h-[5px] w-[98px] bg-complementary -mt-[6px] rounded-[2px]'/>
-                    </div>
-                </div>
-            </div>
+            <Profile />
         </section>
+    )
+}
+
+const Profile = () => {
+    return (
+        <Tilt 
+        className='basis-[50%] relative' 
+        trackOnWindow="true" 
+        tiltReverse='true' 
+        tiltMaxAngleX='15' 
+        tiltMaxAngleY='15' 
+        perspective='1000' 
+        style={{
+            transformStyle: "preserve-3d",
+        }}>
+                <img src={Person} alt="Filipus Arif"
+                style={{
+                    transform: "translateZ(10px)",
+                }}
+                />
+                <img src={Element1} alt="" className='absolute bottom-[10px] left-[90px] animate-[item1_20s_ease_infinite]' />
+                <img src={Element2} alt="" className='absolute top-[250px] left-[50px] animate-[item2_15s_linear_infinite]'/>
+                <img src={Element1} alt="" className='absolute w-[20px] top-[180px] left-[100px] z-50 animate-[item3_15s_ease-in-out_infinite]'/>
+                <img src={Element3} alt="" className='absolute bottom-[230px] right-[5px] animate-[item4_15s_ease-in-out_infinite]'/>
+                <img src={Element1} alt="" className='absolute top-[100px] right-[80px] w-[25px] animate-[item5_30s_ease-out_infinite]'/>
+                <img src={Element2} alt="" className='absolute bottom-[50px] -right-[50px] w-[25px] animate-[item6_30s_ease-out_infinite]'/>
+                <div className='absolute bottom-2 right-10' style={{transform: "translateZ(60px)"}}>
+                    <h1 className='font-bold text-[260%] leading-[115%]'>Filipus Arif <br /> Kristiyan.</h1>
+                    <div className='h-[5px] w-[98px] bg-complementary -mt-[6px] rounded-[2px]'/>
+                </div>
+            </Tilt>
     )
 }

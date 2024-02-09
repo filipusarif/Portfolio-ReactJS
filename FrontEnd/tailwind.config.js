@@ -28,6 +28,41 @@ module.exports = {
             '0%': { transform: 'translateX(0%)' },
             '100%': { transform: 'translateX(-100%)' },
         },
+        item1: {
+          '0%': { transform: 'translateX(0px) translateZ(20px) ' },
+          '50%': { transform: 'translateX(-50px) translateY(-10px) translateZ(20px) rotate(360deg)' },
+          '100%': { transform: 'translateX(0px) translateZ(20px) ' },
+        },
+        item2: {
+          '0%': { transform: 'translateZ(30px) ' },
+          '50%': { transform: 'translateZ(30px) rotate(180deg) scale(0.7)' },
+          '100%': { transform: 'translateZ(30px) rotate(360deg) scale(1)' },
+        },
+        item3: {
+          '0%': { transform: 'translateZ(-40px) translateX(0px)' },
+          '50%': { transform: 'translateZ(-40px) translateY(-30px) rotate(180deg) scale(0.8)' },
+          '100%': { transform: 'translateZ(-40px) rotate(360deg) scale(1)' },
+        },
+        item4: {
+          '0%': { transform: 'translateZ(30px) translateX(0px)' },
+          '50%': { transform: 'translateZ(30px) translateY(30px) rotate(180deg) scale(0.8)' },
+          '100%': { transform: 'translateZ(30px) rotate(360deg) scale(1)' },
+        },
+        item5: {
+          '0%': { transform: 'translateZ(-60px) translateX(0px)' },
+          '50%': { transform: 'translateZ(-60px) translateY(50px) translateX(-150px) rotate(180deg) scale(0.2)' },
+          '100%': { transform: 'translateZ(-60px) rotate(360deg) scale(1)' },
+        },
+        item6: {
+          '0%': { transform: 'translateZ(10px) ' },
+          '50%': { transform: 'translateZ(10px) rotate(180deg) scale(0.7)' },
+          '100%': { transform: 'translateZ(10px) rotate(360deg) scale(1)' },
+        },
+        about: {
+          '0%': { transform: 'translateX(0px)   translateY(0px) skew(10deg)' },
+          '50%': { transform: 'translateX(15px) translateY(-15px) skew(10deg)' },
+          '100%': { transform: 'translateX(0px) translateY(0px) skew(10deg)' },
+        },
     }, 
     },
     container: {

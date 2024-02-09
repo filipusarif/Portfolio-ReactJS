@@ -1,13 +1,50 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth ">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><Filpp /></title>
-  </head>
-  <body class="bg-primary w-screen overflow-x-hidden ">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <Filpp />
+  </title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #141C31;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    *::-webkit-scrollbar-track {
+      background: #141C31;
+      border-radius: 5px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background-color: #215695;
+      border-radius: 14px;
+      border: 3px solid #215695;
+    }
+
+    ::-webkit-scrollbar-button {
+      background-color: #071a30;
+      border-radius: 50px;
+    }
+  </style>
+</head>
+
+<body class="bg-primary w-screen overflow-x-hidden ">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
