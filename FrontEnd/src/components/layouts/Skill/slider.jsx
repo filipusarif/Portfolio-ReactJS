@@ -78,7 +78,7 @@ export default function index(){
     };
     
     return (
-    <div className='w-screen h-fit flex relative' id='scroll'>
+    <div className='w-screen h-fit flex items-center relative' id='scroll'>
         <div className="h-[250px] flex items-center w-fit gap-4 animate-[scroller_40s_linear_infinite] mr-2" id="innerScroller">
             {skill.map(card => (
                 <div className='h-[200px] w-[170px] bg-secondary py-2 rounded-[15px] cursor-pointer transition-all ease'
@@ -101,8 +101,8 @@ export default function index(){
             ))}
             
         </div>
-        <div className='absolute left-0 w-[15%] h-full bg-gradient-to-r from-primary   to-[#ffffff00]'/>
-        <div className='absolute right-0 w-[15%] h-full bg-gradient-to-l from-primary   to-[#ffffff00]'/>
+        <div className='absolute left-0 w-[15%] h-[200px] bg-gradient-to-r from-primary   to-[#ffffff00]'/>
+        <div className='absolute right-0 w-[15%] h-[200px] bg-gradient-to-l from-primary   to-[#ffffff00]'/>
 
     </div>
     )

@@ -14,18 +14,26 @@ export default function index() {
     return (
         <section className="container min-h-screen m-auto flex lg:flex-row flex-col items-center font-Roboto text-white relative" id='Hero'>
             <div className='basis-[50%] font-Roboto'>
-                <p className=' font-Poppins gap-2  font-reguler flex items-center text-[140%]'>Introduction <div className='h-[5px] w-[40px] bg-lightBlueAbout rounded-[2px]'></div> </p>
-                <h1 className='mt-2 text-[315%] font-extrabold leading-[105%] text-transparent bg-clip-text bg-gradient-to-r from-[#2996E5] via-[#1CDAAC] via-[90%] to-[#1CDAAC]'>Web Developer and <br /> UI Designer, based <br /> in Semarang.</h1>
-                <p className='mt-3 w-[80%] text-[91%] leading-5'>Hello! I am a skilled and enthusiastic web developer with a passion for translating concepts into captivating online experience. Proficient in front-end technologies like HTML, CSS, and JavaScript ETC.</p>
-                <a href="#" className=' bg-complementary mt-5 py-[10px] w-[150px] flex items-center justify-center rounded-[14px] gap-[5px]'>Contact Me <img src={Send} alt="send" /></a>
+                <p className=' font-Poppins gap-2  font-reguler flex items-center text-[140%] drop-shadow-lg'>Introduction <div className='h-[4px] w-[30px] bg-lightBlueAbout rounded-[2px]'></div> </p>
+                <h1 className='mt-2 drop-shadow-lg text-[315%] font-extrabold leading-[105%] text-transparent bg-clip-text bg-gradient-to-r from-[#2996E5] via-[#1CDAAC] via-[90%] to-[#1CDAAC]'>Web Developer and <br /> UI Designer, based <br /> in Semarang.</h1>
+                <p className='mt-3 w-[90%] text-very-light drop-shadow-2xl text-[95%] leading-5'>Hello! I am a skilled and enthusiastic web developer with a passion for translating concepts into captivating online experience. Proficient in front-end technologies like HTML, CSS, and JavaScript ETC.</p>
+                <a href="#" className=' bg-complementary mt-5 py-[10px] w-[155px] flex items-center justify-center rounded-[10px] gap-[5px] drop-shadow font-medium'>Contact Me <img src={Send} alt="send" /></a>
                 <div className='flex items-center gap-[15px] mt-20'>
-                    <a href="#"><img src={Github} alt="github" width={'31px'}/></a>
-                    <a href="#"><img src={Linkedin} alt="linkedin" width={'31px'} /></a>
-                    <a href="#"><img src={Instagram} alt="instagram" width={'31px'} /></a>
+                    <Icon to="https://github.com/filipusarif" source={Github} alt="Github" w="31px"/>
+                    <Icon to="https://www.linkedin.com/in/filipus-arif-kristiyan/" source={Linkedin} alt="Linkedin" w="31px"/>
+                    <Icon to="https://www.instagram.com/filipusarif._/" source={Instagram} alt="Instagram" w="31px"/>
                 </div>
             </div>
             <Profile />
         </section>
+    )
+}
+
+const Icon = (prop) => {
+    return (
+    <a href={prop.to} target='_blank'>
+        <img src={prop.source} alt={prop.name} width={prop.width}/>
+    </a>
     )
 }
 
@@ -45,13 +53,14 @@ const Profile = () => {
                 style={{
                     transform: "translateZ(10px)",
                 }}
+                className=' '
                 />
-                <img src={Element1} alt="" className='absolute bottom-[10px] left-[90px] animate-[item1_20s_ease_infinite]' />
-                <img src={Element2} alt="" className='absolute top-[250px] left-[50px] animate-[item2_15s_linear_infinite]'/>
-                <img src={Element1} alt="" className='absolute w-[20px] top-[180px] left-[100px] z-50 animate-[item3_15s_ease-in-out_infinite]'/>
-                <img src={Element3} alt="" className='absolute bottom-[230px] right-[5px] animate-[item4_15s_ease-in-out_infinite]'/>
-                <img src={Element1} alt="" className='absolute top-[100px] right-[80px] w-[25px] animate-[item5_30s_ease-out_infinite]'/>
-                <img src={Element2} alt="" className='absolute bottom-[50px] -right-[50px] w-[25px] animate-[item6_30s_ease-out_infinite]'/>
+                <img src={Element1} alt="" className='absolute drop-shadow-lg bottom-[10px] left-[90px] animate-[item1_20s_ease_infinite]' />
+                <img src={Element2} alt="" className='absolute drop-shadow-lg top-[250px] left-[50px] animate-[item2_15s_linear_infinite]'/>
+                <img src={Element1} alt="" className='absolute drop-shadow-lg w-[20px] top-[180px] left-[100px] z-50 animate-[item3_15s_ease-in-out_infinite]'/>
+                <img src={Element3} alt="" className='absolute drop-shadow-lg bottom-[230px] right-[5px] animate-[item4_15s_ease-in-out_infinite]'/>
+                <img src={Element1} alt="" className='absolute drop-shadow-lg top-[100px] right-[80px] w-[25px] animate-[item5_30s_ease-out_infinite]'/>
+                <img src={Element2} alt="" className='absolute drop-shadow-lg bottom-[50px] -right-[50px] w-[25px] animate-[item6_30s_ease-out_infinite]'/>
                 <div className='absolute bottom-2 right-10' style={{transform: "translateZ(60px)"}}>
                     <h1 className='font-bold text-[260%] leading-[115%]'>Filipus Arif <br /> Kristiyan.</h1>
                     <div className='h-[5px] w-[98px] bg-complementary -mt-[6px] rounded-[2px]'/>

@@ -18,7 +18,7 @@ export default function index(prop){
             tiltReverse='true' 
             tiltMaxAngleX='20' 
             tiltMaxAngleY='20' 
-            perspective='1500' 
+            perspective='4000' 
             style={{
                 transformStyle: "preserve-3d",
                 width: 'full',

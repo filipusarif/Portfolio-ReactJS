@@ -63,6 +63,42 @@ module.exports = {
           '50%': { transform: 'translateX(15px) translateY(-15px) skew(10deg)' },
           '100%': { transform: 'translateX(0px) translateY(0px) skew(10deg)' },
         },
+        bg1: {
+          '0%': { transform: 'translateX(0%)   translateY(0%)' },
+          '50%': { transform: 'translateX(15%) translateY(30%)' },
+          '100%': { transform: 'translateX(0%) translateY(0%)' },
+        },
+        bg2: {
+          '0%': { transform: 'translateX(0%)   translateY(0%)' },
+          '50%': { transform: 'translateX(-15%) translateY(-20%)' },
+          '100%': { transform: 'translateX(0%) translateY(0%)' },
+        },
+        bg3: {
+          '0%': { transform: 'translateX(0%)   translateY(0%)' },
+          '30%': { transform: 'translateX(-30%) translateY(100%)' },
+          '50%': { transform: 'translateX(-70%) translateY(120%)' },
+          '70%': { transform: 'translateX(-100%) translateY(80%)' },
+          '100%': { transform: 'translateX(0%) translateY(0%)' },
+        },
+        bg4: {
+          '0%': { transform: 'translateX(0%)   translateY(0%)' },
+          '50%': { transform: 'translateX(20%) translateY(-100%)' },
+          '100%': { transform: 'translateX(0%) translateY(0%)' },
+        },
+        bg5: {
+          '0%': { transform: 'translateX(0%)   translateY(0%)' },
+          '30%': { transform: 'translateX(5%) translateY(-20%)' },
+          '55%': { transform: 'translateX(-15%) translateY(-30%)' },
+          '90%': { transform: 'translateX(10%) translateY(30%)' },
+          '100%': { transform: 'translateX(0%) translateY(0%)' },
+        },
+        bg6: {
+          '0%': { transform: 'translateX(0%)   translateY(0%)' },
+          '30%': { transform: 'translateX(-20%) translateY(-20%)' },
+          '55%': { transform: 'translateX(-5%) translateY(0%)' },
+          '65%': { transform: 'translateX(-10%) translateY(0%)' },
+          '100%': { transform: 'translateX(0%) translateY(0%)' },
+        },
     }, 
     },
     container: {

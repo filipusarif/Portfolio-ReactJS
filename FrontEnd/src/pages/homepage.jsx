@@ -10,7 +10,7 @@ import Footer from '../components/layouts/Footer'
 
 export default function Homepage(){
     return[
-        <>
+        <section className='h-fit w-full overflow-hidden '>
             <Background />
             <Navbar />
             <Hero />
@@ -19,6 +19,6 @@ export default function Homepage(){
             <Skill />
             <Contact />
             <Footer />
-        </>
+        </section>
     ]
 }
