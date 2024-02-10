@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import logoMini from "../../../assets/images/logoFull.svg"
 
 export default function index() {
@@ -19,7 +18,7 @@ export default function index() {
 
 
     return (
-        <div className={`fixed top-0 w-full z-50 transition duration-700 ease-in-out  ${color ? 'bg-secondary lg:bg-opacity-70 lg:backdrop-blur-sm h-16 pt-[7px]' : ' h-16 pt-[12px] lg:h-16 lg:pt-[7px] bg-secondary lg:bg-transparent'}`}>
+        <div className={`fixed top-0 w-full z-50 transition duration-700 ease-in-out  ${color ? 'bg-secondary lg:bg-opacity-70 lg:backdrop-blur-sm h-16 pt-[7px]' : ' h-16 pt-[12px] lg:h-16 lg:pt-[7px] bg-secondary lg:bg-transparent'}`} >
             <header className="container m-auto font-roboto font-medium text-unactive  flex flex-wrap items-center justify-between">
                 <div className='flex flex-wrap items-center justify-between w-full  lg:w-auto'>
                     <a href="\" className=''><img src={logoMini} alt="" className="!w-[120px]" /></a>
@@ -32,11 +31,11 @@ export default function index() {
                 <div id="navlinks" className={`relative  bg-secondary lg:bg-transparent ${isNavExpanded ? "hidden -translate-y-[120%] lg:-translate-y-0" : "visible translate-y-2  rounded-b-lg p-5"} ${color ? "bg-secondary" : ""} w-full px-6 lg:visible lg:bg-transparent items-center  transition duration-300 ease-in-out lg:block lg:w-auto`}>
                     <nav className=" w-full px-6  tracking-wide transition lg:w-auto  mr-7 lg:block">
                         <ul className="text-[100%] flex flex-col  lg:flex-row items-center justify-around gap-[25px] ">
-                            <li><a href="#about" className='group transition duration-300 hover:text-[#2196F3]'>Tentang <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
-                            <li><a href="" className='group transition duration-300 hover:text-[#2196F3]'>Divisi <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
-                            <li><a href="" className='group transition duration-300 hover:text-[#2196F3]'>Event <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
-                            <li><a href="" target='_blank' className='group transition duration-300 hover:text-[#2196F3]'>TeaLinuxOS <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
-                            <li><a href="" target='_blank' className='group transition duration-300 hover:text-[#2196F3]'>Blog <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
+                            <li><a href="#" className='group transition duration-300 hover:text-[#2196F3]'>Home<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
+                            <li><a href="#About" className='group transition duration-300 hover:text-[#2196F3]'>About<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
+                            <li><a href="#Portfolio" className='group transition duration-300 hover:text-[#2196F3]'>Portfolio<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
+                            <li><a href="#Skill"  className='group transition duration-300 hover:text-[#2196F3]'>Skills<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
+                            <li><a href="#Contact"  className='group transition duration-300 hover:text-[#2196F3]'>Contact<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#2196F3] text-white"></span></a></li>
                         </ul>
                     </nav>
                 </div>

@@ -6,11 +6,14 @@ import Projects from '../components/layouts/Projects'
 import Skill from '../components/layouts/Skill'
 import Contact from '../components/layouts/Contact'
 import Footer from '../components/layouts/Footer'
+import AnimatedCursor from "react-animated-cursor"
+
 
 
 export default function Homepage(){
     return[
-        <section className='h-fit w-full overflow-hidden '>
+        <>
+        <section className='h-fit w-screen relative'>
             <Background />
             <Navbar />
             <Hero />
@@ -19,6 +22,34 @@ export default function Homepage(){
             <Skill />
             <Contact />
             <Footer />
+            <AnimatedCursor
+            innerSize={5}
+            outerSize={35}
+            color='33, 150, 243'
+            outerAlpha={0.2}
+            innerScale={0.7}
+            outerScale={1.5}
+            clickables={[
+                'a',
+                'input[type="text"]',
+                'input[type="email"]',
+                'input[type="number"]',
+                'input[type="submit"]',
+                'input[type="image"]',
+                'label[for]',
+                'select',
+                'textarea',
+                'button',
+                '.link',
+            ]}
+            innerStyle={{
+                backgroundColor: '#2196F3'
+            }}
+            outerStyle={{
+                border: '1px solid #2196F3'
+            }}
+            />
         </section>
+        </>
     ]
 }

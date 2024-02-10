@@ -27,14 +27,14 @@ const Tab = (props) => {
     // Convert milliseconds to days
     var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     return (
-        <div className={` ${props.b} ${props.stat}  h-auto  mx-auto rounded-[40px] top-20 skew-x-[10deg] absolute z-10 ${props.v == 'invisible'? "w-[79.8%]":"w-[80%] pb-[1px] animate-[about_5s_ease_infinite]"} `}>
+        <div className={` ${props.b} ${props.stat}  h-auto shadow-lg   mx-auto rounded-[40px] top-20 skew-x-[10deg] absolute z-10 ${props.v == 'invisible'? "w-[79.8%]":"w-[80%] pb-[1px] animate-[about_5s_ease_infinite]"} `}>
             <div className={` ${props.v} flex px-12 pt-8 items-center mb-[20px]`}>
-                <div className="basis-[20%] flex items-center gap-[10px]">
+                <div className="basis-[20%] flex items-center gap-[10px] drop-shadow-md">
                     <div className="bg-[#FD5D55] w-[25px] h-[25px] rounded-full"/>
                     <div className="bg-[#FEBC2D] w-[25px] h-[25px] rounded-full"/>
                     <div  className="bg-[#26C73E] w-[25px] h-[25px] rounded-full"/>
                 </div>
-                <p className="basis-[80%] text-very-light text-center -translate-x-[12%] ">AboutMe.js</p>
+                <p className="basis-[80%] text-very-light text-center -translate-x-[12%] drop-shadow-lg">AboutMe.js</p>
             </div>
             <div className={`${props.v} text-[#818181] w-full pb-8 font-FiraCode text-[15.5px]`}>
                 <div >
@@ -50,7 +50,7 @@ const Tab = (props) => {
                     <Line no="10"> <span>···</span> <span className='text-purpleAbout'>{`}`}</span></Line>
                     <Line no="11"> <span>···</span> <span className='text-lightBlueAbout'>{`Aboutme`}</span><span className='text-purpleAbout'>{`() {`}</span></Line>
                     <Line no="12"> <span>······</span><span className=' text-yellowAbout'>{`return`}</span><span className='text-blueAbout'>{`[`}</span></Line>
-                    <Line no="13"> <span>·········</span><span className=' text-brownAbout'>{`\`Hello! I'm `} <span className=' text-yellowAbout'>{`\${`}</span><span className='text-redAbout'>this</span><span>.</span><span className='text-lightBlueAbout'>name</span><span className=' text-yellowAbout'>{`}`}</span>{`, a passionate web developer with a knack \``}<span className='text-slate-300'>,</span></span></Line>
+                    <Line no="13"> <span>·········</span><span className=' text-brownAbout'>{`\`Hello! I'm `} <span className=' text-yellowAbout'>{`\${`}</span><span className='text-redAbout'>this</span><span className='text-slate-300'>.</span><span className='text-lightBlueAbout'>name</span><span className=' text-yellowAbout'>{`}`}</span>{`, a passionate web developer with a knack \``}<span className='text-slate-300'>,</span></span></Line>
                     <Line no="14"> <span>·········</span><span className=' text-brownAbout'>{`\`for crafting dynamic and user-friendly digital experiences.\``}<span className='text-slate-300'>,</span></span></Line>
                     <Line no="15"> <span>·········</span><span className=' text-brownAbout'>{`\`With a strong foundation in both front-end and back-end technologies,\``}<span className='text-slate-300'>,</span></span></Line>
                     <Line no="16"> <span>·········</span><span className=' text-brownAbout'>{`\`I thrive on turning creative ideas into functional, visually appealing websites.\``}<span className='text-slate-300'>,</span></span></Line>

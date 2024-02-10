@@ -70,14 +70,14 @@ module.exports = {
         },
         bg2: {
           '0%': { transform: 'translateX(0%)   translateY(0%)' },
-          '50%': { transform: 'translateX(-15%) translateY(-20%)' },
+          '50%': { transform: 'translateX(-15%) translateY(10%)' },
           '100%': { transform: 'translateX(0%) translateY(0%)' },
         },
         bg3: {
           '0%': { transform: 'translateX(0%)   translateY(0%)' },
-          '30%': { transform: 'translateX(-30%) translateY(100%)' },
-          '50%': { transform: 'translateX(-70%) translateY(120%)' },
-          '70%': { transform: 'translateX(-100%) translateY(80%)' },
+          '30%': { transform: 'translateX(-20%) translateY(40%)' },
+          '50%': { transform: 'translateX(-40%) translateY(70%)' },
+          '70%': { transform: 'translateX(-70%) translateY(30%)' },
           '100%': { transform: 'translateX(0%) translateY(0%)' },
         },
         bg4: {
@@ -97,6 +97,11 @@ module.exports = {
           '30%': { transform: 'translateX(-20%) translateY(-20%)' },
           '55%': { transform: 'translateX(-5%) translateY(0%)' },
           '65%': { transform: 'translateX(-10%) translateY(0%)' },
+          '100%': { transform: 'translateX(0%) translateY(0%)' },
+        },
+        bg7: {
+          '0%': { transform: 'translateX(0%)   translateY(0%)' },
+          '55%': { transform: 'translateX(100%) translateY(0%)' },
           '100%': { transform: 'translateX(0%) translateY(0%)' },
         },
     }, 

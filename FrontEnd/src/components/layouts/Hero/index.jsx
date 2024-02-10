@@ -61,7 +61,7 @@ const Profile = () => {
                 <img src={Element3} alt="" className='absolute drop-shadow-lg bottom-[230px] right-[5px] animate-[item4_15s_ease-in-out_infinite]'/>
                 <img src={Element1} alt="" className='absolute drop-shadow-lg top-[100px] right-[80px] w-[25px] animate-[item5_30s_ease-out_infinite]'/>
                 <img src={Element2} alt="" className='absolute drop-shadow-lg bottom-[50px] -right-[50px] w-[25px] animate-[item6_30s_ease-out_infinite]'/>
-                <div className='absolute bottom-2 right-10' style={{transform: "translateZ(60px)"}}>
+                <div className='absolute bottom-2 right-10 drop-shadow-lg' style={{transform: "translateZ(60px)"}}>
                     <h1 className='font-bold text-[260%] leading-[115%]'>Filipus Arif <br /> Kristiyan.</h1>
                     <div className='h-[5px] w-[98px] bg-complementary -mt-[6px] rounded-[2px]'/>
                 </div>

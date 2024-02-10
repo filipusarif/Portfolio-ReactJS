@@ -93,7 +93,7 @@ function Card(prop){
 
     return (
         <Tilt 
-        key={prop.id}
+        
         tiltReverse='true' 
         tiltMaxAngleX='20' 
         tiltMaxAngleY='20' 
@@ -103,7 +103,7 @@ function Card(prop){
         }}
         onLeave={() => setIsHovered(null)}
         onEnter={() => handleHover(prop.id)}
-        className={`relative h-[200px] w-[170px] bg-secondary py-2 rounded-[15px] cursor-pointer transition-all ease ${isHovered === prop.id ? 'hovered' : ''}`}
+        className={`relative h-[200px] w-[170px] bg-gradient-to-t shadow-xl from-primary to-[80%]  to-secondary py-2 rounded-[15px] cursor-pointer transition-all ease ${isHovered === prop.id ? 'hovered' : ''}`}
         >
             <img
                 src={`skill/${prop.img}`}

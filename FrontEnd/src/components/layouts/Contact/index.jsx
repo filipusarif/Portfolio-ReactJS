@@ -48,14 +48,14 @@ export default function Index() {
     return (
         <section className="w-screen h-fit pt-14 font-Roboto container mx-auto" id="Contact">
             <h1 className="text-center font-extrabold text-[250%] text-transparent bg-clip-text bg-gradient-to-r from-[#1f70aa] from-[40%] to-[70%] to-[#1CDAAC]">Contact Me</h1>
-            <p className="text-center text-[120%] text-slate-200 -mt-2">All my projects with manual created</p>
+            <p className="text-center text-[120%] text-slate-300 -mt-2">All my projects with manual created</p>
             <form action="" className='w-[60%] mx-auto mt-10 font-Poppins pb-32'>
                 <div className="relative mt-2 w-full">
                     <input
                         type="text"
                         id="name"
                         name="name"
-                        className="border-b-2 px-4 text-[120%] rounded-t-[10px] text-slate-300 bg-opacity-80 bg-secondary py-[10px] focus:outline-none border-[#215695] focus:border-b-2 transition-colors peer w-full"
+                        className="border-b-2 px-4 drop-shadow-lg text-[120%] rounded-t-[10px] text-slate-300 bg-opacity-80 bg-secondary py-[10px] focus:outline-none border-[#215695] focus:border-b-2 transition-colors peer w-full"
                         autoComplete="off"
                         value={nameValue}
                         onChange={(e) => setNameValue(e.target.value)}
@@ -63,7 +63,7 @@ export default function Index() {
                         onInput={checkInputNameNotEmpty}
                         
                     />
-                    <label htmlFor="name" className={` translate-y-3 absolute font-medium left-2 text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${nameValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
+                    <label htmlFor="name" className={` translate-y-3 absolute drop-shadow-lg  font-medium left-4 text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${nameValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
                         Your Name 
                     </label>
                 </div>
@@ -72,7 +72,7 @@ export default function Index() {
                         type="email"
                         id="email"
                         name="email"
-                        className="border-b-2 px-4 text-[120%] rounded-t-[10px] text-slate-300 bg-opacity-80 bg-secondary py-[10px] focus:outline-none border-[#215695] focus:border-b-2 transition-colors peer w-full"
+                        className="border-b-2 px-4 drop-shadow-lg  text-[120%] rounded-t-[10px] text-slate-300 bg-opacity-80 bg-secondary py-[10px] focus:outline-none border-[#215695] focus:border-b-2 transition-colors peer w-full"
                         autoComplete="off"
                         value={emailValue}
                         onChange={(e) => setEmailValue(e.target.value)}
@@ -80,7 +80,7 @@ export default function Index() {
                         onInput={checkInputEmailNotEmpty}
                         required
                     />
-                    <label htmlFor="email" className={`absolute font-medium left-2 translate-y-3  text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${emailValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
+                    <label htmlFor="email" className={`absolute drop-shadow-lg  font-medium left-4 translate-y-3  text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${emailValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
                         Email Address
                     </label>
                 </div>
@@ -89,7 +89,7 @@ export default function Index() {
                         type="text"
                         id="msg"
                         name="msg"
-                        className="border-b-2 px-4 text-[120%] rounded-t-[10px] text-slate-300 bg-opacity-80 bg-secondary py-[10px] focus:outline-none border-[#215695] focus:border-b-2 transition-colors peer w-full"
+                        className="border-b-2 px-4 drop-shadow-lg  text-[120%] rounded-t-[10px] text-slate-300 bg-opacity-80 bg-secondary py-[10px] focus:outline-none border-[#215695] focus:border-b-2 transition-colors peer w-full"
                         autoComplete="off"
                         value={msgValue}
                         onChange={(e) => setMsgValue(e.target.value)}
@@ -97,11 +97,11 @@ export default function Index() {
                         onInput={checkInputMsgNotEmpty}
                         required
                     />
-                    <label htmlFor="msg" className={`absolute font-medium left-2 translate-y-3  text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${msgValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
+                    <label htmlFor="msg" className={`absolute drop-shadow-lg  font-medium left-4 translate-y-3  text-[120%] text-slate-500 cursor-text  peer-focus:text-[90%] peer-focus:-top-8 peer-focus:text-[#215695] transition-all ${msgValue.trim() !== '' ? 'text-xs text-[#215695] -top-5' : ''}`}>
                         Your Message 
                     </label>
                 </div>
-                <button type="submit" className='px-7 py-2.5 rounded-[10px] bg-complementary flex items-center text-white font-medium mt-7'>Send <img src={SendImg} alt="" /></button>
+                <button type="submit" className='px-7 py-2.5 rounded-[10px] drop-shadow-lg  bg-complementary flex items-center text-white font-medium mt-7'>Send <img src={SendImg} alt="" /></button>
                 
             </form>
         </section>

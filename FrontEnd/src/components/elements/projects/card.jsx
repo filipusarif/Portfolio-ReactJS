@@ -12,13 +12,14 @@ export default function index(prop){
 
     return (
     
-        <a href={prop.linkProject} className="relative w-[46%] font-Roboto text-white font-extrabold cardProject" target="_blank">
+        <a href={prop.linkProject} className="relative w-[45%] font-Roboto text-white font-extrabold cardProject" target="_blank">
             <Tilt
-            key={prop.id}
+            
             tiltReverse='true' 
             tiltMaxAngleX='20' 
             tiltMaxAngleY='20' 
             perspective='4000' 
+            scale='1.1'
             style={{
                 transformStyle: "preserve-3d",
                 width: 'full',
@@ -27,16 +28,16 @@ export default function index(prop){
             onLeave={() => setIsHovered(null)}
             onEnter={() => handleHover(prop.id)}
             className="relative w-full h-full">
-                <img src={`project/${prop.imgProject}`} alt="Project"  className='w-full'/>
-                <div className='absolute bottom-3 -left-12 w-[80%]' 
+                <img src={`project/${prop.imgProject}`} alt="Project"  className='w-full drop-shadow-lg'/>
+                <div className='absolute bottom-3 -left-10 w-[80%]  text-very-light' 
                 style={{
                     transform: "translateZ(50px)",
                 }}>
-                    <h3 className='text-[170%]'>{prop.nameProject}</h3>
-                    <div className='h-[3px] w-[40%] bg-white'/>
+                    <h3 className='text-[170%] drop-shadow-md  '>{prop.nameProject}</h3>
+                    <div className='h-[3px] w-[40%] bg-very-light'/>
                     <div className='flex justify-between items-center w-[40%]'>
                         <p>{prop.noProject}</p>
-                        <img src={Arrow} alt="arrow" />
+                        <img src={Arrow} alt="arrow" className=""/>
                     </div>
                 </div>
             </Tilt>
