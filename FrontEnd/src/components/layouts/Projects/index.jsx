@@ -5,7 +5,7 @@ const projects =[
     {
         id:0,
         name:'TourNgab',
-        link:'',
+        link:'https://filipusarif.github.io/TourNgab-BootstrapUI/',
         year:2022,
         img:'01_tourngab.svg',
         no:'00'
@@ -13,7 +13,7 @@ const projects =[
     {
         id:1,
         name:'To Do List',
-        link:'',
+        link:'https://todolistfa.000webhostapp.com/',
         year:2022,
         img:'02_todolist.svg',
         no:'01'
@@ -21,7 +21,7 @@ const projects =[
     {
         id:2,
         name:'sapuID',
-        link:'',
+        link:'https://orakompra.000webhostapp.com/',
         year:2022,
         img:'03_smarthome.svg',
         no:'02'
@@ -29,7 +29,7 @@ const projects =[
     {
         id:3,
         name:'About Me',
-        link:'',
+        link:'https://filipusarif.github.io/AboutMe/',
         year:2022,
         img:'04_aboutme.svg',
         no:'03'
@@ -52,16 +52,14 @@ const projects =[
     },
     {
         id:6,
-        name:'Blind Sick',
-        link:'',
+        name:'Blind Stick',
+        link:'https://blindstickproject.000webhostapp.com/',
         year:2023,
         img:'07_blindstick.svg',
         no:'06'
     },
 ];
 
-
-// Mendapatkan daftar tahun unik dari proyek-proyek
 const uniqueYears = [...new Set(projects.map(item => item.year))];
 
 
@@ -72,13 +70,13 @@ export default function index(){
     <section className="container min-h-screen w-full mx-auto font-Roboto pt-14 -mb-24" id="Portfolio">
         <h1 className="text-center font-extrabold text-[250%] text-transparent bg-clip-text bg-gradient-to-r from-[#1f70aa] from-[40%] to-[70%]  to-[#1CDAAC]">My Projects</h1>
         <p className="text-center  text-[120%] text-slate-300 -mt-2">All my projects with manual created</p>
-        <div className="w-full h-fit flex flex-col justify-center items-center px-10 pb-[100px]">
+        <div className="w-full h-fit  flex flex-col justify-center items-center px-10 pb-[100px] translate-x-4 lg:translate-x-0">
             {/* foreach */}
             {uniqueYears.map(year => (
             <CardWrapper year={year}/>
             ))}
             <div className="flex justify-start  w-full mt-10">
-                <div className="flex justify-center items-center gap-4 translate-x-3.5 ">
+                <div className="flex justify-center items-center gap-4 -translate-x-9 lg:translate-x-3.5">
                     <div className="h-[25px] w-[25px] border-[4px] border-complementary  rounded-[50%]"/>
                     <p className="font-bold text-[120%] text-slate-200"></p>
                 </div>
@@ -93,10 +91,10 @@ const CardWrapper = (props) => {
     <>
         <Year year={props.year} />
         <div className=" w-full h-fit flex">
-            <div className='basis-[10%]'>
-                <div className="w-[4px] h-[109%] bg-gradient-to-r from-complementary to-[#1CDAAC]  translate-x-6 -mt-1 drop-shadow-lg "/>
+            <div className='basis-[5%] lg:basis-[10%]'>
+                <div className="w-[4px] h-[110%] bg-gradient-to-r from-complementary to-[#1CDAAC] -translate-x-[25px] lg:translate-x-6 -mt-1 drop-shadow-lg "/>
             </div>
-            <div className='flex flex-wrap justify-start items-center gap-20 basis-[90%] py-2 pl-10'>
+            <div className='flex  flex-wrap justify-start items-center gap-10 lg:gap-20 lg:basis-[90%] py-2 pl-10'>
                 {projects
                 .filter(item => item.year === props.year)
                 .map(item => (
@@ -112,7 +110,7 @@ const CardWrapper = (props) => {
 const Year = (props) => {
     return (
         <div className="flex justify-start w-full mt-10" >
-            <div className="flex justify-center items-center gap-4 translate-x-3.5 drop-shadow-lg">
+            <div className="flex justify-center items-center gap-4 -translate-x-9 lg:translate-x-3.5 drop-shadow-lg">
                 <div 
                 style={{ 
                     position: 'relative',

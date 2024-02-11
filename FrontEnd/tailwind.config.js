@@ -63,6 +63,11 @@ module.exports = {
           '50%': { transform: 'translateX(15px) translateY(-15px) skew(10deg)' },
           '100%': { transform: 'translateX(0px) translateY(0px) skew(10deg)' },
         },
+        about2: {
+          '0%': { transform: 'translateX(0px)   translateY(0px) skew(8deg)' },
+          '50%': { transform: 'translateX(10px) translateY(-10px) skew(8deg)' },
+          '80%': { transform: 'translateX(0px) translateY(0px) skew(8deg)' },
+        },
         bg1: {
           '0%': { transform: 'translateX(0%)   translateY(0%)' },
           '50%': { transform: 'translateX(15%) translateY(30%)' },

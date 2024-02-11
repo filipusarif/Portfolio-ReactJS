@@ -7,10 +7,9 @@ export default function index() {
     
     return (
         
-        <section className="container m-auto grid place-items-center pt-24 relative h-screen" id='About'>
+        <section className="container m-auto grid place-items-center  pt-24 relative h-[95vh] overflow-hidden" id='About'>
             <Tab v="invisible" b="bg-complementary" />
             <Tab v="visible" b="bg-gradient-to-tr  from-primary from-[20%]  to-secondary"/>
-            
         </section>
     )
 }
@@ -27,17 +26,17 @@ const Tab = (props) => {
     // Convert milliseconds to days
     var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     return (
-        <div className={` ${props.b} ${props.stat}  h-auto shadow-lg   mx-auto rounded-[40px] top-20 skew-x-[10deg] absolute z-10 ${props.v == 'invisible'? "w-[79.8%]":"w-[80%] pb-[1px] animate-[about_5s_ease_infinite]"} `}>
-            <div className={` ${props.v} flex px-12 pt-8 items-center mb-[20px]`}>
-                <div className="basis-[20%] flex items-center gap-[10px] drop-shadow-md">
-                    <div className="bg-[#FD5D55] w-[25px] h-[25px] rounded-full"/>
-                    <div className="bg-[#FEBC2D] w-[25px] h-[25px] rounded-full"/>
-                    <div  className="bg-[#26C73E] w-[25px] h-[25px] rounded-full"/>
+        <div className={` ${props.b} ${props.stat}  h-auto shadow-lg overflow-hidden rounded-[40px] top-20 skew-x-[8deg] lg:skew-x-[10deg] absolute z-10 ${props.v == 'invisible'? "w-[74.9%] lg:w-[79.8%]":"w-[75%] lg:w-[80%] pb-[1px] lg:animate-[about_5s_ease_infinite] animate-[about2_5s_ease_infinite] "} `}>
+            <div className={` ${props.v} flex px-12 pt-8 items-center mb-[20px] w-full`}>
+                <div className="basis-[20%] flex items-center gap-[5px] lg:gap-[10px] drop-shadow-md">
+                    <div className="bg-[#FD5D55]  w-[15px] h-[15px] lg:w-[25px] lg:h-[25px] rounded-full"/>
+                    <div className="bg-[#FEBC2D]  w-[15px] h-[15px] lg:w-[25px] lg:h-[25px] rounded-full"/>
+                    <div  className="bg-[#26C73E] w-[15px] h-[15px] lg:w-[25px] lg:h-[25px] rounded-full"/>
                 </div>
                 <p className="basis-[80%] text-very-light text-center -translate-x-[12%] drop-shadow-lg">AboutMe.js</p>
             </div>
-            <div className={`${props.v} text-[#818181] w-full pb-8 font-FiraCode text-[15.5px]`}>
-                <div >
+            <div className={`${props.v} text-[#818181] overflow-x-auto pb-8 w-full font-FiraCode  text-[15.5px]`}>
+                <div className='w-[1000px]'>
                     <Line no="01"> <span className='text-yellowAbout'>Class </span><span className='text-redAbout'>{`FilipusArif`} </span><span className=' text-yellowAbout'>{`{`}</span></Line>
                     <Line no="02"> <span>···</span>{`// solve the problem.`}</Line>
                     <Line no="03"> <span>···</span>{`// Then, write the code.`}</Line>

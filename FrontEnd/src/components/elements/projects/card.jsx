@@ -12,7 +12,7 @@ export default function index(prop){
 
     return (
     
-        <a href={prop.linkProject} className="relative w-[45%] font-Roboto text-white font-extrabold cardProject" target="_blank">
+        <a href={prop.linkProject} className="relative w-[100%] lg:w-[45%] font-Roboto text-white font-extrabold cardProject" target="_blank">
             <Tilt
             
             tiltReverse='true' 
@@ -29,11 +29,11 @@ export default function index(prop){
             onEnter={() => handleHover(prop.id)}
             className="relative w-full h-full">
                 <img src={`project/${prop.imgProject}`} alt="Project"  className='w-full drop-shadow-lg'/>
-                <div className='absolute bottom-3 -left-10 w-[80%]  text-very-light' 
+                <div className='absolute bottom-1 lg:bottom-3 -left-10 w-[80%]  text-very-light' 
                 style={{
                     transform: "translateZ(50px)",
                 }}>
-                    <h3 className='text-[170%] drop-shadow-md  '>{prop.nameProject}</h3>
+                    <h3 className='lg:text-[170%] text-[130%] drop-shadow-md  '>{prop.nameProject}</h3>
                     <div className='h-[3px] w-[40%] bg-very-light'/>
                     <div className='flex justify-between items-center w-[40%]'>
                         <p>{prop.noProject}</p>

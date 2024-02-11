@@ -103,7 +103,7 @@ function Card(prop){
         }}
         onLeave={() => setIsHovered(null)}
         onEnter={() => handleHover(prop.id)}
-        className={`relative h-[200px] w-[170px] bg-gradient-to-t shadow-xl from-primary to-[80%]  to-secondary py-2 rounded-[15px] cursor-pointer transition-all ease ${isHovered === prop.id ? 'hovered' : ''}`}
+        className={`relative h-[200px] w-[150px] lg:w-[170px] bg-gradient-to-t shadow-xl from-primary to-[80%]  to-secondary py-2 rounded-[15px] transition-all ease ${isHovered === prop.id ? 'hovered' : ''}`}
         >
             <img
                 src={`skill/${prop.img}`}
@@ -117,7 +117,8 @@ function Card(prop){
             <p className='abso text-center text-slate-200 font-bold font-Poppins'
             style={{
                 transform: "translateZ(50px)",
-            }}>{prop.tech}</p>
+            }}
+            >{prop.tech}</p>
         </Tilt>
     )
 }

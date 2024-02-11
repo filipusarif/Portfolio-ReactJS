@@ -49,7 +49,7 @@ export default function Index() {
         <section className="w-screen h-fit pt-14 font-Roboto container mx-auto" id="Contact">
             <h1 className="text-center font-extrabold text-[250%] text-transparent bg-clip-text bg-gradient-to-r from-[#1f70aa] from-[40%] to-[70%] to-[#1CDAAC]">Contact Me</h1>
             <p className="text-center text-[120%] text-slate-300 -mt-2">All my projects with manual created</p>
-            <form action="" className='w-[60%] mx-auto mt-10 font-Poppins pb-32'>
+            <form action="" className='w-[90%] lg:w-[60%] mx-auto mt-10 font-Poppins pb-32'>
                 <div className="relative mt-2 w-full">
                     <input
                         type="text"
