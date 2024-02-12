@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
-import Tilt from 'react-parallax-tilt';
-
+import Card from '../../elements/skill/menu.jsx'
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import React, { useEffect, useState } from "react";
 
 export default function Index() {
     const skill = [
@@ -41,40 +42,54 @@ export default function Index() {
         },
         {
             id:7,
+            tech:'NextJS',
+            img:'card14.svg'
+        },
+        {
+            id:8,
             tech:'PHP',
             img:'card8.svg'
         },
         {
-            id:8,
+            id:9,
             tech:'Laravel',
             img:'card9.svg'
         },
         {
-            id:9,
+            id:10,
             tech:'C++',
             img:'card10.svg'
         },
         {
-            id:10,
+            id:11,
             tech:'Python',
             img:'card11.svg'
         },
         {
-            id:11,
+            id:12,
             tech:'Django',
             img:'card12.svg'
         },
         {
-            id:12,
+            id:13,
             tech:'MySql',
             img:'card13.svg'
         },
     ];
-
+    useEffect(() => {
+        Aos.init()
+    },[]) 
     
 
     return (
-        <div className="container w-full h-fit mx-auto flex flex-wrap justify-center gap-4 mt-7 pb-6">
+        <div 
+        className="container w-full h-fit mx-auto flex flex-wrap justify-center gap-4 mt-7 pb-6"
+        data-aos="fade-right"
+        data-aos-easing="ease-in-out"
+        data-aos-duration="800"
+        data-aos-offset="250"
+        // data-aos-delay={ scrollY == 'scroll' ? "30" : "300"}
+        >
         {skill.map((card) => (
             <Card id={card.id} tech={card.tech} img={card.img}/>
         ))}
@@ -82,43 +97,3 @@ export default function Index() {
     );
     }
 
-function Card(prop){
-
-    const [isHovered, setIsHovered] = useState(null);
-
-    const handleHover = (cardId) => {
-        setIsHovered(cardId);
-    };
-
-
-    return (
-        <Tilt 
-        
-        tiltReverse='true' 
-        tiltMaxAngleX='20' 
-        tiltMaxAngleY='20' 
-        perspective='1000' 
-        style={{
-            transformStyle: "preserve-3d",
-        }}
-        onLeave={() => setIsHovered(null)}
-        onEnter={() => handleHover(prop.id)}
-        className={`relative h-[200px] w-[150px] lg:w-[170px] bg-gradient-to-t shadow-xl from-primary to-[80%]  to-secondary py-2 rounded-[15px] transition-all ease ${isHovered === prop.id ? 'hovered' : ''}`}
-        >
-            <img
-                src={`skill/${prop.img}`}
-                alt="Tech"
-                className={`w-[150px] h-[150px] mx-auto ${isHovered === prop.id ? '' : 'filter grayscale'}`}
-                style={{
-                    transform: "translateZ(50px)",
-                    width: "65%"
-                }}
-            />
-            <p className='abso text-center text-slate-200 font-bold font-Poppins'
-            style={{
-                transform: "translateZ(50px)",
-            }}
-            >{prop.tech}</p>
-        </Tilt>
-    )
-}

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Hero from '../components/layouts/Hero'
 import Navbar from '../components/layouts/Navbar'
 import About from '../components/layouts/About'
@@ -6,14 +7,21 @@ import Projects from '../components/layouts/Projects'
 import Skill from '../components/layouts/Skill'
 import Contact from '../components/layouts/Contact'
 import Footer from '../components/layouts/Footer'
+import Loader from '../components/layouts/Loader'
 import AnimatedCursor from "react-animated-cursor"
 
 
-
 export default function Homepage(){
+    const [loaderComplete, setLoaderComplete] = useState(false);
+
+    const handleLoaderComplete = () => {
+        setLoaderComplete(true);
+    };
     return[
         <>
-        <section className='h-fit w-screen relative'>
+        {!loaderComplete && <Loader onComplete={handleLoaderComplete} />}
+        <section className={`h-fit w-screen relative ${loaderComplete ? 'overflow-auto' : ' invisible overflow-hidden'}`}>
+            <Loader />
             <Background />
             <Navbar />
             <Hero />

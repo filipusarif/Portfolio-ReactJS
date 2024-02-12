@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Tilt from 'react-parallax-tilt';
 import Arrow from '../../../assets/images/arrowProject.svg'
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 export default function index(prop){
     const [isHovered, setIsHovered] = useState(null);
@@ -9,10 +10,22 @@ export default function index(prop){
     const handleHover = (cardId) => {
         setIsHovered(cardId);
     };
+    useEffect(() => {
+        Aos.init()
+    },[]) 
 
     return (
     
-        <a href={prop.linkProject} className="relative w-[100%] lg:w-[45%] font-Roboto text-white font-extrabold cardProject" target="_blank">
+        <a 
+        href={prop.linkProject} 
+        className="relative w-[100%] lg:w-[45%] font-Roboto text-white font-extrabold cardProject" 
+        target="_blank"
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-duration="800"
+        data-aos-offset="250"
+        data-aos-delay={ prop.noProject % 2 == 0 ? "0" : "200"}
+        >
             <Tilt
             
             tiltReverse='true' 
@@ -28,7 +41,7 @@ export default function index(prop){
             onLeave={() => setIsHovered(null)}
             onEnter={() => handleHover(prop.id)}
             className="relative w-full h-full">
-                <img src={`project/${prop.imgProject}`} alt="Project"  className='w-full drop-shadow-lg'/>
+                <img src={`project/${prop.imgProject}`} alt="Project"  className='w-full drop-shadow-lg rounded-lg'/>
                 <div className='absolute bottom-1 lg:bottom-3 -left-10 w-[80%]  text-very-light' 
                 style={{
                     transform: "translateZ(50px)",

@@ -36,6 +36,30 @@
       background-color: #071a30;
       border-radius: 50px;
     }
+
+    .container-with-hidden-scrollbar {
+      overflow-x: hidden;
+    }
+
+    /* Styles to hide scrollbar in modern browsers */
+    .container-with-hidden-scrollbar::-webkit-scrollbar {
+      width: 8px;
+      /* adjust as needed */
+    }
+
+    .container-with-hidden-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .container-with-hidden-scrollbar::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    /* Styles to hide scrollbar in Firefox */
+    .container-with-hidden-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+    }
   </style>
 </head>
 

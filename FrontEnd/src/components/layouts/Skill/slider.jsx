@@ -39,7 +39,7 @@ const skill = [
     {
         id:7,
         tech:'NextJS',
-        img:'card7.svg'
+        img:'card14.svg'
     },
     {
         id:8,
