@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SendImg from "../../../assets/images/Send.svg"
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 export default function Index() {
     const [emailValue, setEmailValue] = useState('');
     const [nameValue, setNameValue] = useState('');
     const [msgValue, setMsgValue] = useState('');
+    useEffect(() => {
+        Aos.init()
+    },[]) 
 
     function checkInputNameNotEmpty() {
         const inputName = document.getElementById('name');
@@ -45,12 +51,32 @@ export default function Index() {
         }
     }
 
+    
+
     return (
         <section className="w-screen h-fit pt-14 font-Roboto container mx-auto" id="Contact">
-            <h1 className="text-center font-extrabold text-[250%] text-transparent bg-clip-text bg-gradient-to-r from-[#1f70aa] from-[40%] to-[70%] to-[#1CDAAC]">Contact Me</h1>
-            <p className="text-center text-[120%] text-slate-400 -mt-2">let's contact me on</p>
+            <h1 
+            className="text-center font-extrabold text-[250%] text-transparent bg-clip-text bg-gradient-to-r from-[#1f70aa] from-[40%] to-[70%] to-[#1CDAAC]"
+            data-aos="fade"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+            >Contact Me</h1>
+            <p 
+            className="text-center text-[120%] text-slate-400 -mt-2"
+            data-aos="fade"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-offset="210"
+            >let's contact me on</p>
             <form action="" className='w-[90%] lg:w-[60%] mx-auto mt-10 font-Poppins pb-32'>
-                <div className="relative mt-2 w-full">
+                <div 
+                className="relative mt-2 w-full"
+                data-aos="fade-left"
+                data-aos-easing="ease"
+                data-aos-duration="900"
+                data-aos-offset="210"
+                >
                     <input
                         type="text"
                         id="name"
@@ -67,7 +93,12 @@ export default function Index() {
                         Your Name 
                     </label>
                 </div>
-                <div className="relative mt-7 w-full">
+                <div className="relative mt-7 w-full"
+                data-aos="fade-left"
+                data-aos-easing="ease"
+                data-aos-duration="900"
+                data-aos-offset="210"
+                >
                     <input
                         type="email"
                         id="email"
@@ -84,7 +115,12 @@ export default function Index() {
                         Email Address
                     </label>
                 </div>
-                <div className="relative mt-7 w-full">
+                <div className="relative mt-7 w-full"
+                data-aos="fade-left"
+                data-aos-easing="ease"
+                data-aos-duration="900"
+                data-aos-offset="210"
+                >
                     <input
                         type="text"
                         id="msg"
@@ -101,7 +137,14 @@ export default function Index() {
                         Your Message 
                     </label>
                 </div>
-                <button type="submit" className='px-7 py-2.5 rounded-[10px] drop-shadow-lg  bg-complementary flex items-center text-white font-medium mt-7'>Send <img src={SendImg} alt="" /></button>
+                <button 
+                type="submit" 
+                className='px-7 py-2.5 rounded-[10px] drop-shadow-lg  bg-complementary flex items-center text-white font-medium mt-7'
+                data-aos="fade-up"
+                data-aos-easing="ease"
+                data-aos-duration="900"
+                data-aos-offset="130"
+                >Send <img src={SendImg} alt="" /></button>
                 
             </form>
         </section>

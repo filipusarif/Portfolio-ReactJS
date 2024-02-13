@@ -40,8 +40,8 @@ export default function Loader({ onComplete }) {
     <div className="fixed w-screen h-screen overflow-hidden" ref={comp}>
       <div className="h-screen w-screen bg-secondary flex items-center justify-center gap-1 lg:gap-3 font-Poppins absolute z-50 font-extrabold text-very-light text-[20px] lg:text-[50px]"
         id="loader">
-        <h1 id="text-1">Hello👋</h1>
-        <h1 id="text-2">, </h1>
+        <h1 id="text-1">Hello👋,</h1>
+        {/* <h1 id="text-2"></h1> */}
         <h1 id="text-3">Filipus</h1>
         <h1 id="text-4">Arif</h1>
         <h1 id="text-5">Here</h1>

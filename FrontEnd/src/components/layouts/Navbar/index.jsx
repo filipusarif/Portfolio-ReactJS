@@ -3,8 +3,9 @@ import gsap from 'gsap'
 import logoMini from "../../../assets/images/logoFull.svg"
 
 export default function index({ onComplate }) {
-
-    const comp = useRef(null)
+    const [isNavExpanded, setIsNavExpanded] = useState(true)
+    const [color, setColor] = useState(false);
+    const comp = useRef(null);
 
     useLayoutEffect(()=>{
         let ctx = gsap.context(()=>{
@@ -21,7 +22,6 @@ export default function index({ onComplate }) {
     })
 
     //Change navbar color when scroll
-    const [color, setColor] = useState(false);
     const changeColor = () => {
         if (window.scrollY >= 90) {
             setColor(true)
@@ -30,8 +30,6 @@ export default function index({ onComplate }) {
         }
     }
     window.addEventListener('scroll', changeColor);
-
-    const [isNavExpanded, setIsNavExpanded] = useState(true)
 
 
     return (

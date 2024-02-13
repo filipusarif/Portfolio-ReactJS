@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Tilt from 'react-parallax-tilt';
-import Arrow from '../../../assets/images/arrowProject.svg'
+import Arrow from '../../../assets/images/arrowProjectNew.svg'
 import Aos from "aos";
 import 'aos/dist/aos.css'
 
