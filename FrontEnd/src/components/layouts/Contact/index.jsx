@@ -54,7 +54,7 @@ export default function Index() {
     
 
     return (
-        <section className="w-screen h-fit pt-14 font-Roboto container mx-auto" id="Contact">
+        <section className="w-screen overflow-hidden h-fit pt-14 font-Roboto container mx-auto" id="Contact">
             <h1 
             className="text-center font-extrabold text-[250%] text-transparent bg-clip-text bg-gradient-to-r from-[#1f70aa] from-[40%] to-[70%] to-[#1CDAAC]"
             data-aos="fade"
