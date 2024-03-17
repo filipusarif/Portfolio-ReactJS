@@ -75,7 +75,7 @@ export default function Index() {
                 data-aos="fade-left"
                 data-aos-easing="ease"
                 data-aos-duration="900"
-                data-aos-offset="210"
+                data-aos-offset="130"
                 >
                     <input
                         type="text"
@@ -97,7 +97,7 @@ export default function Index() {
                 data-aos="fade-left"
                 data-aos-easing="ease"
                 data-aos-duration="900"
-                data-aos-offset="210"
+                data-aos-offset="130"
                 >
                     <input
                         type="email"
@@ -119,7 +119,7 @@ export default function Index() {
                 data-aos="fade-left"
                 data-aos-easing="ease"
                 data-aos-duration="900"
-                data-aos-offset="210"
+                data-aos-offset="130"
                 >
                     <input
                         type="text"
@@ -143,7 +143,7 @@ export default function Index() {
                 data-aos="fade-up"
                 data-aos-easing="ease"
                 data-aos-duration="900"
-                data-aos-offset="130"
+                data-aos-offset="100"
                 >Send <img src={SendImg} alt="" /></button>
                 
             </form>
